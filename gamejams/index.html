@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Game Jams</title>
+
+    <style>
+        tr {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+<h2>All Game Jams</h2>
+
+<table style="width: 50%; text-align:left; margin-right: auto; margin-left: auto;">
+    <tbody>
+    <tr onclick="loadPage('ld48')">
+        <td>Deeply Organic</td>
+        <td>Ludum Dare 48</td>
+        <td>April 2021</td>
+    </tr>
+
+    <tr onclick="loadPage('ggj2021')">
+        <td>Fetch</td>
+        <td>Global Game Jam 2021</td>
+        <td>January 2021</td>
+    </tr>
+
+    <tr onclick="loadPage('gmtk2020')">
+        <td>One Last Breath</td>
+        <td>GMTK 2020</td>
+        <td>July 2020</td>
+    </tr>
+
+    <tr onclick="loadPage('ld46')">
+        <td>Keep It Alive</td>
+        <td>Ludum Dare 46</td>
+        <td>April 2020</td>
+    </tr>
+
+    <tr onclick="loadPage('ggj2020')">
+        <td>Sinking Ship</td>
+        <td>Global Game Jam 2020</td>
+        <td>Jan 2020</td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+
+<script>
+    var baseUrl = "https://tom1milman.github.io/portfolio/gamejams/";
+
+    function loadPage(gamejam) {
+        window.location = baseUrl + gamejam;
+    }
+</script>
+</html>
