@@ -1,45 +1,84 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Sinking Ship</title>
-  </head>
-  <body style="text-align: center">
-  <h2>Sinking Ship</h2>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GGJ2020 - Sinking Ship</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" onclick="loadPage('')">
+      <img src="https://via.placeholder.com/150/FFFFFF/?text=TM" width="28" height="28">
+    </a>
+  </div>
 
-  <p><b>Global Game Jam 2020 - January 2020</b>
-    <br>
-    <br>
-    <a href="https://doctortm.itch.io/sinking-ship" target="_blank">Play the game</a>
-    <br>
-    <a href="https://globalgamejam.org/2020/games/sinking-ship-9" target="_blank">Submission link</a>
+  <div id="navbarBasicExample" class="navbar-menu is-active">
+    <div class="navbar-start">
+      <a onclick="loadPage('')" class="navbar-item">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a onclick="loadGamejam('')" class="navbar-link">
+          Gamejams
+        </a>
+
+        <div class="navbar-dropdown">
+          <a onclick="loadGamejam('ld48')" class="navbar-item">
+            Deeply Organic
+          </a>
+          <a onclick="loadGamejam('ggj2021')" class="navbar-item">
+            Fetch
+          </a>
+          <a onclick="loadGamejam('gmtk2020')" class="navbar-item">
+            One Last Breath
+          </a>
+          <a onclick="loadGamejam('ld46')" class="navbar-item">
+            Keep It Alive
+          </a>
+          <a onclick="loadGamejam('ggj2020')" class="navbar-item">
+            Sinking Ship
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<p class="title is-2 tags is-centered">Sinking Ship</p>
+<p class="subtitle is-5 tags is-centered">Global Game Jam 2020 - January 2020</p>
+
+<div class="subtitle is-6 tags is-centered">
+  <a href="https://doctortm.itch.io/sinking-ship" target="_blank">Play the game</a>
+  |
+  <a href="https://globalgamejam.org/2020/games/sinking-ship-9" target="_blank">Submission page</a>
+</div>
+
+<div class="content" style="margin-left: 25%; margin-right: 25%;">
+  <p class="has-text-centered">
+    The project was created in 48 hours as a submission for the Global Game Jam 2020.
   </p>
-  <br>
+</div>
 
-  <img src="./Screenshots/Featured%20Image.png" style="height: 200px;">
-
-  <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
-    The entire project was created in 48 hours as a submission for the Global game Jam 2020.
-
-    <br>
-    <br>
-
-    All assets(Scripts, Images, Sounds, etc) in the game were created by me during the event period.
-    The game isn't perfect, and there are some known bugs that I didn't have time to fix.
-  </p>
-
+<div class="tags is-centered">
   <img src="./Screenshots/Screenshot%20(4).png" style="max-height: 400px;">
-  <br>
-
   <img src="./Screenshots/Screenshot%20(3).png" style="max-height: 400px;">
-  <br>
-
   <img src="./Screenshots/Screenshot%20(2).png" style="max-height: 400px;">
-  <br>
-
   <img src="./Screenshots/Screenshot%20(5).png" style="max-height: 400px;">
+</div>
 
+</body>
 
-  </body>
+<script>
+  var baseUrl = "https://tom1milman.github.io/portfolio/";
+
+  function loadPage(path) {
+    window.location = baseUrl + path;
+  }
+
+  function loadGamejam(jamName) {
+    loadPage("gamejams/" + jamName + "/");
+  }
+</script>
 </html>

@@ -1,61 +1,130 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Game Jams</title>
-
-    <style>
-        tr {
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 </head>
-<body style="text-align: center">
-<h2>All Game Jams</h2>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" onclick="loadPage('')">
+            <img src="https://via.placeholder.com/150/FFFFFF/?text=TM" width="28" height="28">
+        </a>
+    </div>
 
-<table style="width: 50%; text-align:left; margin-right: auto; margin-left: auto;">
-    <tbody>
-    <tr onclick="loadPage('ld48')">
-        <td>Deeply Organic</td>
-        <td>Ludum Dare 48</td>
-        <td>April 2021</td>
-    </tr>
+    <div id="navbarBasicExample" class="navbar-menu is-active">
+        <div class="navbar-start">
+            <a onclick="loadPage('')" class="navbar-item">
+                Home
+            </a>
 
-    <tr onclick="loadPage('ggj2021')">
-        <td>Fetch</td>
-        <td>Global Game Jam 2021</td>
-        <td>January 2021</td>
-    </tr>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a onclick="loadGamejam('')" class="navbar-link">
+                    Gamejams
+                </a>
 
-    <tr onclick="loadPage('gmtk2020')">
-        <td>One Last Breath</td>
-        <td>GMTK 2020</td>
-        <td>July 2020</td>
-    </tr>
+                <div class="navbar-dropdown">
+                    <a onclick="loadGamejam('ld48')" class="navbar-item">
+                        Deeply Organic
+                    </a>
+                    <a onclick="loadGamejam('ggj2021')" class="navbar-item">
+                        Fetch
+                    </a>
+                    <a onclick="loadGamejam('gmtk2020')" class="navbar-item">
+                        One Last Breath
+                    </a>
+                    <a onclick="loadGamejam('ld46')" class="navbar-item">
+                        Keep It Alive
+                    </a>
+                    <a onclick="loadGamejam('ggj2020')" class="navbar-item">
+                        Sinking Ship
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
 
-    <tr onclick="loadPage('ld46')">
-        <td>Keep It Alive</td>
-        <td>Ludum Dare 46</td>
-        <td>April 2020</td>
-    </tr>
+<h1 class="title is-1 tags is-centered">Game jams</h1>
 
-    <tr onclick="loadPage('ggj2020')">
-        <td>Sinking Ship</td>
-        <td>Global Game Jam 2020</td>
-        <td>Jan 2020</td>
-    </tr>
-    </tbody>
-</table>
+<br>
 
+<div class="tile is-ancestor tags is-centered">
+    <div class="tile is-vertical is-8">
+        <div class="tile">
+            <div class="tile is-parent">
+                <article class="tile is-child box" onclick="loadGamejam('ld48')" style="cursor: pointer">
+                    <p class="title">Deeply Organic</p>
+                    <p class="subtitle">Ludum Dare 48- April 2021</p>
+                    <figure class="image is-4by3">
+                        <img src="./ld48/Screenshots/banner 640x512.png">
+                    </figure>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box" onclick="loadGamejam('ggj2021')" style="cursor: pointer">
+                    <p class="title">Fetch</p>
+                    <p class="subtitle">Global Game Jam 2021 - January 2021</p>
+                    <figure class="image is-4by3">
+                        <img src="./ggj2021/Screenshots/banner2.png">
+                    </figure>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box" onclick="loadGamejam('gmtk2020')" style="cursor: pointer">
+                    <p class="title">One Last Breath</p>
+                    <p class="subtitle">GMTK 2020 - July 2020</p>
+                    <figure class="image is-4by3">
+                        <img src="./gmtk2020/Screenshots/Logo.png">
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tile is-ancestor tags is-centered">
+    <div class="tile is-vertical is-8">
+        <div class="tile">
+            <div class="tile is-parent">
+                <article class="tile is-child box" onclick="loadGamejam('ld46')" style="cursor: pointer">
+                    <p class="title">Keep It Alive</p>
+                    <p class="subtitle">Ludum Dare 46- April 2020</p>
+                    <figure class="image is-4by3">
+                        <img src="./ld46/Screenshots/Screenshot1.png">
+                    </figure>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box" onclick="loadGamejam('ggj2020')" style="cursor: pointer">
+                    <p class="title">Sinking Ship</p>
+                    <p class="subtitle">Global Game Jam 2020 - January 2020</p>
+                    <figure class="image is-4by3">
+                        <img src="./ggj2020/Screenshots/Screenshot (4).png">
+                    </figure>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box" style="box-shadow: 0 0 0 0;">
+
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 
 <script>
-    var baseUrl = "https://tom1milman.github.io/portfolio/gamejams/";
+    var baseUrl = "https://tom1milman.github.io/portfolio/";
 
-    function loadPage(gamejam) {
-        window.location = baseUrl + gamejam + "/";
+    function loadPage(path) {
+        window.location = baseUrl + path;
+    }
+
+    function loadGamejam(jamName) {
+        loadPage("gamejams/" + jamName + "/");
     }
 </script>
 </html>
