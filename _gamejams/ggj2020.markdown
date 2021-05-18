@@ -1,0 +1,15 @@
+---
+layout: gamejam
+title:  "Sinking Ship"
+gjname: "Global Game Jam 2020"
+gjdate:   January 2020
+categories: jekyll update
+gamelink: "https://doctortm.itch.io/sinking-ship"
+sublink: "https://globalgamejam.org/2020/games/sinking-ship-9"
+images:
+    - "ggj2020/Screenshot%20(4).png"
+    - "ggj2020/Screenshot%20(3).png"
+    - "ggj2020/Screenshot%20(2).png"
+    - "ggj2020/Screenshot%20(5).png"
+---
+The project was created in 48 hours as a submission for the Global Game Jam 2020.

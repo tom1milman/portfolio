@@ -1,0 +1,16 @@
+---
+layout: gamejam
+title:  "Fetch"
+gjname: "Global Game Jam 2021"
+gjdate:   January 2021
+categories: jekyll update
+gamelink: "https://doctortm.itch.io/fetch"
+sublink: "https://globalgamejam.org/2021/games/fetch-8"
+images:
+    - "ggj2021/MainMenu.png"
+    - "ggj2021/ThrowBall.png"
+    - "ggj2021/InGame.png"
+    - "ggj2021/IngameBall.png"
+    - "ggj2021/PlayAgain.png"
+---
+The project was created in 48 hours as a submission for the Global Game Jam 2021.

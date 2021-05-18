@@ -1,0 +1,19 @@
+---
+layout: gamejam
+title:  "Deeply Organic"
+gjname: "Ludum Dare 48"
+gjdate:   April 2021
+categories: jekyll update
+gamelink: "https://doctortm.itch.io/deeply-organic"
+sublink: "https://ldjam.com/events/ludum-dare/48/deeply-organic"
+images:
+    - "ld48/Mainmenu.png"
+    - "ld48/Intro.png"
+    - "ld48/Liver.png"
+    - "ld48/Stomach.png"
+---
+
+The project was created in 72 hours in collaboration as a submission for the Ludum Dare 48 game jam.
+
+- Steven Bristovitski - writing, audio, intro/outro scene, moral support
+- Tom Milman - programming, level design, modeling, UI

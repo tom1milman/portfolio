@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<p class="title is-2 tags is-centered">{{ page.title }}</p>
+<p class="subtitle is-5 tags is-centered"> {{page.gjname}} - {{page.gjdate}}</p>
+
+<div class="subtitle is-6 tags is-centered">
+  <a href="{{page.gamelink}}" target="_blank">Play the game</a>
+  {% if page.sublink %}
+  |
+  <a href="{{page.sublink}}" target="_blank">Submission page</a>
+  {% endif %}
+</div>
+
+<div class="content" style="margin-left: 25%; margin-right: 25%;">
+
+<!--  <p class="has-text-centered">-->
+<!--    The project was created in 72 hours in collaboration as a submission for the Ludum Dare 48 game jam.-->
+<!--  </p>-->
+<!--  <ul class="">-->
+<!--    <li>Steven Bristovitski - writing, audio, intro/outro scene, moral support</li>-->
+<!--    <li>Tom Milman - programming, level design, modeling, UI</li>-->
+<!--  </ul>-->
+{{content}}
+</div>
+
+<div class="tags is-centered">
+  {% for image in page.images %}
+    <img src="/assets/img/{{ image }}" style="max-height: 400px;">
+  {% endfor %}
+</div>
