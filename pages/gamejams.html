@@ -1,0 +1,84 @@
+---
+layout: default
+permalink: /gamejams/
+---
+<h1 class="title is-1 tags is-centered">Game jams</h1>
+
+
+{%- for gamejam in site.gamejams -%}
+
+{{gamejam.title}}
+<figure class="image is-4by3">
+<img src="/assets/img/{{ gamejam.banner }}">
+</figure>
+
+<br>
+<br>
+
+{% endfor %}
+
+
+
+<!--<div class="tile is-ancestor tags is-centered">-->
+<!--    <div class="tile is-vertical is-8">-->
+<!--        <div class="tile">-->
+<!--            <div class="tile is-parent">-->
+<!--                <article class="tile is-child box" onclick="loadGamejam('ld48')" style="cursor: pointer">-->
+<!--                    <p class="title">Deeply Organic</p>-->
+<!--                    <p class="subtitle">Ludum Dare 48- April 2021</p>-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="./ld48/Screenshots/banner 640x512.png">-->
+<!--                    </figure>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--            <div class="tile is-parent">-->
+<!--                <article class="tile is-child box" onclick="loadGamejam('ggj2021')" style="cursor: pointer">-->
+<!--                    <p class="title">Fetch</p>-->
+<!--                    <p class="subtitle">Global Game Jam 2021 - January 2021</p>-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="./ggj2021/Screenshots/banner2.png">-->
+<!--                    </figure>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--            <div class="tile is-parent">-->
+<!--                <article class="tile is-child box" onclick="loadGamejam('gmtk2020')" style="cursor: pointer">-->
+<!--                    <p class="title">One Last Breath</p>-->
+<!--                    <p class="subtitle">GMTK 2020 - July 2020</p>-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="./gmtk2020/Screenshots/Logo.png">-->
+<!--                    </figure>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="tile is-ancestor tags is-centered">-->
+<!--    <div class="tile is-vertical is-8">-->
+<!--        <div class="tile">-->
+<!--            <div class="tile is-parent">-->
+<!--                <article class="tile is-child box" onclick="loadGamejam('ld46')" style="cursor: pointer">-->
+<!--                    <p class="title">Keep It Alive</p>-->
+<!--                    <p class="subtitle">Ludum Dare 46- April 2020</p>-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="./ld46/Screenshots/Screenshot1.png">-->
+<!--                    </figure>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--            <div class="tile is-parent">-->
+<!--                <article class="tile is-child box" onclick="loadGamejam('ggj2020')" style="cursor: pointer">-->
+<!--                    <p class="title">Sinking Ship</p>-->
+<!--                    <p class="subtitle">Global Game Jam 2020 - January 2020</p>-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="./ggj2020/Screenshots/Screenshot (4).png">-->
+<!--                    </figure>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--            <div class="tile is-parent">-->
+<!--                <article class="tile is-child box" style="box-shadow: 0 0 0 0;">-->
+
+<!--                </article>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

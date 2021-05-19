@@ -1,16 +1,24 @@
 ---
+# gamejam info
 layout: gamejam
 title:  "Deeply Organic"
 gjname: "Ludum Dare 48"
 gjdate:   April 2021
+gjnumber: 5
+
 categories: jekyll update
+
+# Links
 gamelink: "https://doctortm.itch.io/deeply-organic"
 sublink: "https://ldjam.com/events/ludum-dare/48/deeply-organic"
+
+# Images
 images:
     - "ld48/Mainmenu.png"
     - "ld48/Intro.png"
     - "ld48/Liver.png"
     - "ld48/Stomach.png"
+banner: "ld48/banner 640x512.png"
 ---
 
 The project was created in 72 hours in collaboration as a submission for the Ludum Dare 48 game jam.

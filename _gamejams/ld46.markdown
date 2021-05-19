@@ -1,15 +1,23 @@
 ---
+# gamejam info
 layout: gamejam
 title:  "Keep It Alive"
 gjname: "Ludum Dare 46"
 gjdate:   April 2020
+gjnumber: 2
+
 categories: jekyll update
+
+# Links
 gamelink: "https://doctortm.itch.io/keep-it-alive"
 sublink: "https://ldjam.com/events/ludum-dare/46/keep-it-alive-52"
+
+# Images
 images:
     - "ld46/Screenshot1.png"
     - "ld46/Screenshot2.png"
     - "ld46/Screenshot3.png"
     - "ld46/Screenshot4.png"
+banner: "ld46/Screenshot1.png"
 ---
 The project was created in 72 hours as a submission for the Ludum Dare 46 game jam.

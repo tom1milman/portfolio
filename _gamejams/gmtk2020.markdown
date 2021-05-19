@@ -1,13 +1,21 @@
 ---
+# gamejam info
 layout: gamejam
 title:  "One Last Breath"
 gjname: "GMTK 2020"
 gjdate:   July 2020
+gjnumber: 3
+
 categories: jekyll update
+
+# Links
 gamelink: "https://doctortm.itch.io/one-last-breath"
+
+# Images
 images:
     - "gmtk2020/MainMenu.png"
     - "gmtk2020/InGame.png"
     - "gmtk2020/Tutorial.png"
+banner: "gmtk2020/Logo.png"
 ---
 The project was created in 72 hours as a submission for the Ludum Dare 46 game jam.
