@@ -14,18 +14,11 @@ layout: default
 
 <div class="content" style="margin-left: 25%; margin-right: 25%;">
 
-<!--  <p class="has-text-centered">-->
-<!--    The project was created in 72 hours in collaboration as a submission for the Ludum Dare 48 game jam.-->
-<!--  </p>-->
-<!--  <ul class="">-->
-<!--    <li>Steven Bristovitski - writing, audio, intro/outro scene, moral support</li>-->
-<!--    <li>Tom Milman - programming, level design, modeling, UI</li>-->
-<!--  </ul>-->
 {{content}}
 </div>
 
 <div class="tags is-centered">
   {% for image in page.images %}
-    <img src="/assets/img/{{ image }}" style="max-height: 400px;">
+    <img src="{{site.baseurl}}/assets/img/{{ image }}" style="max-height: 400px;">
   {% endfor %}
 </div>
