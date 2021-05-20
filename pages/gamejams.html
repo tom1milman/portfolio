@@ -15,7 +15,7 @@ let i;
 {% for gamejam in site.gamejams %}
     i = parseInt({{ gamejam.gjnumber }});
     tiles[i] = `
-    <article class="tile is-child box" onclick="location.href='{{page.baseurl}}{{gamejam.url}}'" style="cursor: pointer; text-align: center;">
+    <article class="tile is-child box" onclick="location.href='{{site.baseurl}}{{gamejam.url}}'" style="cursor: pointer; text-align: center;">
         <p class="title">{{gamejam.title}}</p>
         <p class="subtitle">{{gamejam.gjname}} - {{gamejam.gjdate}}</p>
         <figure class="image is-4by3">
