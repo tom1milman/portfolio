@@ -28,6 +28,8 @@ url: "https://tom1milman.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+background_color: f8f8ff
+
 collections:
   gamejams:
     output: true
