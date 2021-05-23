@@ -25,3 +25,10 @@ The project was created in 72 hours in collaboration as a submission for the Lud
 
 - Steven Bristovitski - writing, audio, intro/outro scene, moral support
 - Tom Milman - programming, level design, modeling, UI
+
+<br>
+<u>Our achievements:</u>
+- Our game matched the <strong>theme</strong>(deeper and deeper) better than <strong>92%</strong> of other games.
+- We scored more than <strong>91.2%</strong> of other submissions in the <strong>innovation</strong> category. 
+- Our game was more <strong>fun</strong> to play than <strong>88.6%</strong> of other games.
+- And it had better <strong>humor</strong> than <strong>96.6%</strong> of other games.
