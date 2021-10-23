@@ -34,6 +34,9 @@ collections:
   gamejams:
     output: true
     permalink: /gamejams/:path/
+  games:
+    output: true
+    permalink: /games/:path/
 
 # Build settings
 #theme: minima

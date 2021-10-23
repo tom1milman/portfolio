@@ -1,4 +1,117 @@
 ---
 layout: default
 ---
-{{content}}
+<div style="align-items:center;">
+<div class="tile is-ancestor mt-1" style="margin-left: 20%; margin-right: 20%;">
+  <div class="tile is-vertical" style="position: relative;">
+    <div style="  margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+      <p class="title tags is-centered">Tomer Milman</p>
+      <p class="subtitle tags is-centered">Software Engineer at Feedzai<br>and Game Developer Hobbyist</p>
+    </div>
+  </div>
+  <div class="tile is-4">
+      <img src="{{site.baseurl}}/assets/img/profile_pic.jpg" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+
+{%- include divider-line.html -%}
+
+<h1 id="games" class="title is-2 tags is-centered">Games</h1>
+
+<div id="gamesTiles" style="margin-top 10px; margin-bottom: 20px;"></div>
+
+
+{%- include divider-line.html -%}
+
+<h1 id="gamejams" class="title is-2 tags is-centered">Game jams</h1>
+
+<div id="gamejamsTiles" style="margin-top 10px; margin-bottom: 20px;"></div>
+
+</div>
+<script>
+function createRow(gj1, gj2, gj3) {
+    let tile1 = gj1? gj1 : getEmptyTile();
+    let tile2 = gj2? gj2 : getEmptyTile();
+    let tile3 = gj3? gj3 : getEmptyTile();
+
+    return `<div class="tile is-ancestor tags is-centered">
+        <div class="tile is-vertical is-8">
+            <div class="tile">
+                <div class="tile is-parent">
+                    ${tile1}
+                </div>
+                <div class="tile is-parent">
+                    ${tile2}
+                </div>
+                <div class="tile is-parent">
+                    ${tile3}
+                </div>
+            </div>
+        </div>
+    </div>`
+}
+
+function getEmptyTile() {
+    return `<article class="tile is-child box" style="box-shadow: 0 0 0 0; background-color: #{{site.background_color}}"></article>`;
+}
+
+function joinTiles(tiles, elementId){
+  var rows = [];
+
+  while (tiles.length > 0) {
+      rows.push(createRow(tiles.pop(), tiles.pop(), tiles.pop()));
+  }
+
+  document.getElementById(elementId).innerHTML = rows.join("\n");
+}
+
+function createGameTiles() {
+  var tiles = []
+  let i;
+
+  {% for game in site.games %}
+      i = parseInt({{ game.gnumber }});
+      console.log("{{game.title}}")
+      tiles[i] = `
+      <article class="tile is-child box" style="text-align: center;">
+          <div style="cursor: pointer;" onclick="window.open('{{game.gamelink}}', '_blank')">
+            <p class="title">{{game.title}}</p>
+            <figure class="image is-4by3">
+                <img src="{{site.baseurl}}/assets/img/{{ game.banner }}">
+            </figure>
+          </div>
+          <div style="margin: 10px 0 -10px 0">
+            {% if game.googleplayid %}
+              {%- include icon-google-play.html id=game.googleplayid -%}
+            {% endif %}
+          </div>
+      </article>
+      `;
+  {% endfor %}
+
+  joinTiles(tiles, "gamesTiles");
+}
+
+function createGameJamTiles(){
+  var tiles = []
+  let i;
+
+  {% for gamejam in site.gamejams %}
+      i = parseInt({{ gamejam.gjnumber }});
+      tiles[i] = `
+      <article class="tile is-child box" onclick="location.href='{{site.baseurl}}{{gamejam.url}}'" style="cursor: pointer; text-align: center;">
+          <p class="title">{{gamejam.title}}</p>
+          <p class="subtitle">{{gamejam.gjname}}</p>
+          <figure class="image is-4by3">
+              <img src="{{site.baseurl}}/assets/img/{{ gamejam.banner }}">
+          </figure>
+      </article>
+      `;
+  {% endfor %}
+
+  joinTiles(tiles, "gamejamsTiles");
+}
+
+createGameTiles();
+createGameJamTiles();
+</script>
